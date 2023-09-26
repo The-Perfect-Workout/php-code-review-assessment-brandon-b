@@ -3,7 +3,7 @@
 - PHP v8.2
 - [Composer](https://getcomposer.org/) - as a dependency manager for PHP
 - [CakePHP 2.x](https://book.cakephp.org/2/en/index.html) - PHP framework for web applications
-- [Doctrine ORM](https://www.doctrine-project.org/projects/orm.html) and [SQLite](https://www.sqlite.org/) for the database
+- [SQLite](https://www.sqlite.org/) for the database
 - [PHPUnit](https://phpunit.de/) for unit tests
 
 Before continuing to the next steps, you'll need PHP 8.2 and Composer installed on your computer. The other tools will be installed with Composer.
@@ -15,6 +15,9 @@ The following instructions are used to run and use the application. These instru
 ```bash
 # Install dependencies
 $ composer install
+
+# Run a local web server
+$ php -S localhost:8000
 
 # Create the database locally
 $ symfony console doctrine:migrations:migrate
@@ -30,7 +33,4 @@ $ symfony console doctrine:migrations:migrate --env=test
 
 # Run tests:
 $ php bin/phpunit
-
-# Run the code fixer to clean up your code
-$ ./vendor/bin/php-cs-fixer fix
 ```
