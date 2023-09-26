@@ -1,48 +1,36 @@
-# CakePHP
+## Language & Tools
 
-[![Latest Stable Version](https://poser.pugx.org/cakephp/cakephp/v/stable.svg)](https://packagist.org/packages/cakephp/cakephp)
-[![License](https://poser.pugx.org/cakephp/cakephp/license.svg)](https://packagist.org/packages/cakephp/cakephp)
-[![Bake Status](https://secure.travis-ci.org/cakephp/cakephp.png?branch=master)](https://travis-ci.org/cakephp/cakephp)
-[![Code consistency](https://squizlabs.github.io/PHP_CodeSniffer/analysis/cakephp/cakephp/grade.svg)](https://squizlabs.github.io/PHP_CodeSniffer/analysis/cakephp/cakephp/)
+- PHP v8.2
+- [Composer](https://getcomposer.org/) - as a dependency manager for PHP
+- [CakePHP 2.x](https://book.cakephp.org/2/en/index.html) - PHP framework for web applications
+- [Doctrine ORM](https://www.doctrine-project.org/projects/orm.html) and [SQLite](https://www.sqlite.org/) for the database
+- [PHPUnit](https://phpunit.de/) for unit tests
 
-CakePHP is a rapid development framework for PHP which uses commonly known design patterns like Active Record, Association Data Mapping, Front Controller and MVC.
-Our primary goal is to provide a structured framework that enables PHP users at all levels to rapidly develop robust web applications, without any loss to flexibility.
+Before continuing to the next steps, you'll need PHP 8.2 and Composer installed on your computer. The other tools will be installed with Composer.
 
+### Project Setup
 
-## Some Handy Links
+The following instructions are used to run and use the application. These instructions are written for a Mac/Linux/WSL (Windows Subsystem for Linux) environment. If you are running on Windows and not using WSL, you might need to modify the commands slightly.
 
-[CakePHP](https://cakephp.org) - The rapid development PHP framework
+```bash
+# Install dependencies
+$ composer install
 
-[CookBook](https://book.cakephp.org) - THE CakePHP user documentation; start learning here!
+# Create the database locally
+$ symfony console doctrine:migrations:migrate
 
-[API](https://api.cakephp.org) - A reference to CakePHP's classes
+# Refresh seed data to make data relevant to today
+$ symfony console doctrine:fixtures:load -n
 
-[Plugins](https://plugins.cakephp.org) - A repository of extensions to the framework
+# Run example scenario
+$ symfony console ProcessPayrollNotificationsCommand
 
-[The Bakery](https://bakery.cakephp.org) - Tips, tutorials and articles
+# Create the database for testing
+$ symfony console doctrine:migrations:migrate --env=test
 
-[Community Center](https://community.cakephp.org) - A source for everything community related
+# Run tests:
+$ php bin/phpunit
 
-[Training](https://training.cakephp.org) - Join a live session and get skilled with the framework
-
-[CakeFest](https://cakefest.org) - Don't miss our annual CakePHP conference
-
-[Cake Software Foundation](https://cakefoundation.org) - Promoting development related to CakePHP
-
-
-## Get Support!
-
-[#cakephp](https://webchat.freenode.net/?channels=#cakephp) on irc.freenode.net - Come chat with us, we have cake
-
-[Google Group](https://groups.google.com/group/cake-php) - Community mailing list and forum
-
-[GitHub Issues](https://github.com/cakephp/cakephp/issues) - Got issues? Please tell us!
-
-[Roadmaps](https://github.com/cakephp/cakephp/wiki#roadmaps) - Want to contribute? Get involved!
-
-
-## Contributing
-
-[CONTRIBUTING.md](CONTRIBUTING.md) - Quick pointers for contributing to the CakePHP project
-
-[CookBook "Contributing" Section (2.x)](https://book.cakephp.org/2.0/en/contributing.html) [(3.x)](https://book.cakephp.org/3.0/en/contributing.html) - Version-specific details about contributing to the project
+# Run the code fixer to clean up your code
+$ ./vendor/bin/php-cs-fixer fix
+```
