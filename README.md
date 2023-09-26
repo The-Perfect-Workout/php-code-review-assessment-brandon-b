@@ -31,6 +31,6 @@ $ symfony console ProcessPayrollNotificationsCommand
 # Create the database for testing
 $ symfony console doctrine:migrations:migrate --env=test
 
-# Run tests:
-$ php bin/phpunit
+# Run tests
+$ composer test
 ```

@@ -177,7 +177,7 @@ class CakeTestSuiteDispatcher {
 				return $included;
 			}
 		}
-		include 'PHPUnit' . DS . 'Autoload.php';
+		include ROOT . DS . 'app' . DS . 'Vendor' . DS . 'autoload.php';
 		return class_exists('PHPUnit_Framework_TestCase');
 	}
 
