@@ -219,21 +219,7 @@
 		<exec command="ssh root@new.cakephp.org dokku ps:rebuild pear" checkreturn="true" />
 	</target>
 
-	<target name="codestyle" description="Check codestyle (human readable format)">
-		<phpcodesniffer
-			standard="CakePHP"
-			allowedFileExtensions="php">
-			<fileset refid="libs" />
-		</phpcodesniffer>
-	</target>
-
 	<target name="reports-ci">
-		<phpcodesniffer
-			standard="CakePHP"
-			allowedFileExtensions="php">
-			<fileset refid="libs" />
-			<formatter type="checkstyle" outfile="checkstyle.xml" />
-		</phpcodesniffer>
 		<phpcpd
 			minLines="4"
 			minTokens="50">
