@@ -20,7 +20,7 @@ $ composer install
 $ php -S localhost:8000
 
 # Create the database locally
-$ symfony console doctrine:migrations:migrate
+$ http://localhost:8000/data/initialize
 
 # Refresh seed data to make data relevant to today
 $ symfony console doctrine:fixtures:load -n
