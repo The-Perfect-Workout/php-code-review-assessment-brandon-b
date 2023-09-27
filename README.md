@@ -22,9 +22,6 @@ $ php -S localhost:8000
 # Initialize the database
 $ http://localhost:8000/data/initialize
 
-# Run example scenario
-$ http://localhost:8000/cron/processPayrollNotifications
-
-# Run tests
-$ composer test
+# Run tests for the example scenario
+$ ./lib/Cake/Console/cake test app/Test/Case/Lib/PayrollNotificationsLibTest.php --stderr --verbose
 ```
