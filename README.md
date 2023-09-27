@@ -1,6 +1,6 @@
 ## Language & Tools
 
-- PHP v8.2
+- PHP 8.2
 - [Composer](https://getcomposer.org/) - as a dependency manager for PHP
 - [CakePHP 2.x](https://book.cakephp.org/2/en/index.html) - PHP framework for web applications
 - [SQLite](https://www.sqlite.org/) for the database
@@ -10,7 +10,7 @@ Before continuing to the next steps, you'll need PHP 8.2 and Composer installed 
 
 ### Project Setup
 
-The following instructions are used to run and use the application. These instructions are written for a Mac/Linux/WSL (Windows Subsystem for Linux) environment. If you are running on Windows and not using WSL, you might need to modify the commands slightly.
+The following instructions are used to run and use the application. These instructions are written for a Mac/Linux/WSL (Windows Subsystem for Linux) environment with PHP 8.2 installed. If you are running on Windows and not using WSL, you might need to modify the commands slightly.
 
 ```bash
 # Install dependencies
@@ -23,7 +23,7 @@ $ php -S localhost:8000
 $ http://localhost:8000/data/initialize
 
 # Run example scenario
-$ symfony console ProcessPayrollNotificationsCommand
+$ http://localhost:8000/cron/processPayrollNotifications
 
 # Run tests
 $ composer test
