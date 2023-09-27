@@ -19,17 +19,11 @@ $ composer install
 # Run a local web server
 $ php -S localhost:8000
 
-# Create the database locally
+# Initialize the database
 $ http://localhost:8000/data/initialize
-
-# Refresh seed data to make data relevant to today
-$ symfony console doctrine:fixtures:load -n
 
 # Run example scenario
 $ symfony console ProcessPayrollNotificationsCommand
-
-# Create the database for testing
-$ symfony console doctrine:migrations:migrate --env=test
 
 # Run tests
 $ composer test
