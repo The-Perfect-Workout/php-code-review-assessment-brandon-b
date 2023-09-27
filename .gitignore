@@ -10,6 +10,8 @@
 /dist
 /tags
 *.mo
+example_database
+test_example_database
 
 # IDE and editor specific files #
 #################################
