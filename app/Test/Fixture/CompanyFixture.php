@@ -13,19 +13,6 @@ class CompanyFixture extends CakeTestFixture {
 		'tableParameters' => []
 	];
 
-	public $records = [
-		[
-			'id' => 1,
-			'name' => 'Muggles Inc.',
-			'created' => '2023-09-27 13:51:56',
-			'modified' => '2023-09-27 13:51:56'
-		],
-		[
-			'id' => 2,
-			'name' => 'Hogwarts',
-			'created' => '2023-09-27 13:51:56',
-			'modified' => '2023-09-27 13:51:56'
-		],
-	];
+	public $records = [];
 
 }
